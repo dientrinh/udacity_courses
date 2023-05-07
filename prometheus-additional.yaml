@@ -2,15 +2,15 @@
   metrics_path: /metrics
   static_configs:
     - targets: 
-      - 18.219.45.143:9100
-      - 18.219.45.143:80
+      - 18.118.139.25:9100
+      - 18.118.139.25:80
 - job_name: blackbox
   metrics_path: /probe
   params:
     module: [http_2xx]
   static_configs:
     - targets:
-      - http://18.219.45.143
+      - http://18.118.139.25
   relabel_configs:
   - source_labels: [__address__]
     target_label: __param_target

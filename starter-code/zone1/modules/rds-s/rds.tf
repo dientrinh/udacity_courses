@@ -31,6 +31,8 @@ resource "aws_rds_cluster" "udacity_cluster-s" {
   engine_mode              = "provisioned"
   engine                   = "aurora-mysql"
   engine_version           = "5.7.mysql_aurora.2.07.2"
+  master_username          = "udacity"
+  master_password          = "MyUdacityPassword"
   skip_final_snapshot      = true
   storage_encrypted        = false
   depends_on = [aws_rds_cluster_parameter_group.cluster_pg-s]

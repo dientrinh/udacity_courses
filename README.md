@@ -1,3 +1,34 @@
+# List Commands
+1- Copy the AMI to your account
+aws ec2 create-restore-image-task --object-key ami-0ec6fdfb365e5fc00.bin --bucket udacity-srend --name "udacity-dientv1"
+{
+    "ImageId": "ami-0887f6aa047c8dd2e"
+}
+2 - Copy the AMI to us-east-2 and us-west-1
+ 2.1 - To us-east-2
+aws ec2 copy-image --source-image-id ami-0887f6aa047c8dd2e --source-region us-east-1 --region us-east-2 --name "udacity-dientv1"
+{
+    "ImageId": "ami-02fd5976646eaffda"
+}
+2.2 - To us-west-1
+aws ec2 copy-image --source-image-id ami-0887f6aa047c8dd2e --source-region us-east-1 --region us-west-1 --name "udacity-dientv1"
+{
+    "ImageId": "ami-0e649f2b70933ebcd"
+}
+2 - Create s3 bucket in us-east-2
+ - In us-east-2 s3 bucket named: udacity-tf-dientv1
+ - In us-west-1 s3 bucket named: udacity-tf-dientv1-west
+3 - Create keypair named udacity
+Do this in BOTH us-east-2 and us-west-1
+4 - Edit and run terraform from zone1 
+terraform init
+terraform apply
+5 - Update eks
+aws eks --region us-east-2 update-kubeconfig --name udacity-cluster
+kubectl config use-context 
+kubectl config use-context arn:aws:eks:us-east-2:301747534114:cluster/udacity-cluster
+kubectl create namespace monitoring
+
 # Deploying HA Infrastructure
 
 The first step in this project will be deploying infrastructure that you can run Prometheus and Grafana on. You will then use the servers you deployed to create an SLO/SLI dashboard. Next, you will modify existing infrastructure templates and deploy a highly-available infrastructure to AWS in multiple zones using Terrafrom. With this you will also deploy a RDS database cluster that has a replica in the alternate zone.
