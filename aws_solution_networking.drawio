@@ -477,7 +477,7 @@
           <mxGeometry x="80" y="150" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uGGIfiHAPS6wDzHJEv5e-63" value="SQS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#CCFFFF;" vertex="1" parent="uGGIfiHAPS6wDzHJEv5e-1">
-          <mxGeometry x="180" y="150" width="60" height="30" as="geometry" />
+          <mxGeometry x="155" y="147" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uGGIfiHAPS6wDzHJEv5e-64" value="Interface Endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uGGIfiHAPS6wDzHJEv5e-1">
           <mxGeometry x="450" y="323" width="80" height="30" as="geometry" />
@@ -514,6 +514,9 @@
             <mxPoint x="279" y="264" as="sourcePoint" />
             <mxPoint x="479" y="164" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Ut1axqQfhKvmZitbanWK-14" value="API Gateway" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#CCFFFF;" vertex="1" parent="uGGIfiHAPS6wDzHJEv5e-1">
+          <mxGeometry x="230" y="143" width="60" height="37" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
